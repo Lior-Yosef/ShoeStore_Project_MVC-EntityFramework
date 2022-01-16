@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ShoeStore_Project_MVC_EntityFramework
 {
@@ -12,6 +13,10 @@ namespace ShoeStore_Project_MVC_EntityFramework
             // Web API configuration and services
 
             // Web API routes
+
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
