@@ -1,0 +1,15 @@
+﻿@using ShoeStore_Project_MVC_EntityFramework.Models;
+
+
+<h2>GetshoesSport</h2>
+
+<div>
+    @foreach (SportShoe shoes in Model)
+    {
+    <h1>ModelName: @shoes.ModelName</h1>
+        <h1>CompanyName: @shoes.CompanyName</h1>
+        <h1>Size: @shoes.Size</h1>
+        <h1>Price: @shoes.Price</h1>
+
+    }
+</div>
