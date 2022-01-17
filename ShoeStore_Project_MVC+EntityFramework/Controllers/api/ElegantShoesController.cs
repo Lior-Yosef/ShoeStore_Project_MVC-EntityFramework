@@ -47,7 +47,7 @@ namespace ShoeStore_Project_MVC_EntityFramework.Controllers
                 }
                 db.ElegantShoes.Add(elegantshoes);
                 await db.SaveChangesAsync();
-                return Ok("success");
+                return Ok("add success");
             }
             catch (sqlException ex) { return BadRequest(ex.Message); }
             catch (Exception ex) { return BadRequest(ex.Message); }
